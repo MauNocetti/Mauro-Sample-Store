@@ -2,7 +2,7 @@
 
 <{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper relative block">
   <header class="header flex items-center justify-between lg:justify-start bg-white">
-    <a href="#" class="menu--mobile__btn" title="Toggle menu">
+    <a href="#" class="menu--mobile__btn lg:hidden" title="Toggle menu">
       <span>
         {%- render 'icon-hamburger' -%}
       </span>
@@ -28,7 +28,7 @@
 
     {%- if section.settings.menu != blank -%}
       <nav class="header__navigation hidden lg:block">
-        <ul class="header__menu flex px-14 xl:px-20" role="list">
+        <ul class="header__menu flex" role="list">
           {%- for link in section.settings.menu.links -%}
             <li class="header__menu-item font-bold text-dark-grey uppercase px-6 group">
               <a href="{{ link.url }}" class="relative">
@@ -83,7 +83,7 @@
         </div>
       {%- endif -%}
 
-      <a href="{{ routes.cart_url }}" class="header__icon relative flex ml-6" id="cart-icon-bubble">
+      <a href="{{ routes.cart_url }}" class="header__cart-icon relative flex ml-6" id="cart-icon-bubble">
         {%- render 'icon-cart' -%}
 
         <span class="visually-hidden">{{ 'sections.header.cart' | t }}</span>
