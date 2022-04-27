@@ -1,0 +1,114 @@
+   
+// -----------------------------------------------------------------------------
+// Video Player
+// -----------------------------------------------------------------------------
+
+@keyframes video-cover-icon-pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.video-player-fs-wrapper {
+  width: 100%;
+  max-width: 2000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Responsive embed
+.video-player {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; // 16:9
+  height: 0;
+  overflow: hidden;
+
+  iframe,
+  object,
+  embed,
+  .video-player__embed,
+  .video-player__cover,
+  .video-player__cover-still {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    // These are needed for Vimeo embeds which use height and width attributes
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.video-player__embed {
+  height: 100%;
+  width: 100%;
+}
+
+.video-player__cover {
+  z-index: 2;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  background-color: theme("colors.black");
+  cursor: pointer;
+  transition: opacity 0.6s ease-in;
+
+  .video-player--playing &,
+  .video-player--buffering & {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-out;
+  }
+
+  .video-player--paused & {
+    opacity: 1;
+  }
+}
+
+.video-player__cover-still {
+  z-index: -1;
+  background: {
+    size: cover;
+    repeat: no-repeat;
+  }
+  opacity: 1;
+}
+
+.video-player__cover-play {
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  opacity: 0.75;
+  transition: opacity 0.15s ease-in;
+
+  @media (min-width: theme("screens.md")) {
+    height: 100px;
+    width: 100px;
+  }
+
+  .icon {
+    height: 100%;
+    width: 100%;
+  }
+
+  .video-player__cover:hover & {
+    opacity: 1;
+    transition: opacity 0.15s ease-out;
+  }
+
+  .video-player--buffering & .icon {
+    animation: video-cover-icon-pulse 1.7s infinite ease-in-out;
+  }
+}

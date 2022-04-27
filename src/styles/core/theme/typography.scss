@@ -1,0 +1,80 @@
+/*
+ * ==========================================================================
+ * Typography
+ * ==========================================================================
+ * Define all typography classes for the theme in this file. All styles should 
+ * reference tailwind config values using theme('')
+*/
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  .h1,
+  .h2,
+  .h3,
+  .h4 {
+    color: theme("colors.black");
+    font-weight: theme("fontWeight.normal");
+    letter-spacing: theme("letterSpacing.normal");
+    margin-bottom: theme("spacing.4");
+  }
+
+  h1,
+  .h1 {
+    font-size: theme("fontSize.mobile-h1");
+    line-height: theme("fontSize.mobile-h1.1.lineHeight");
+
+    @screen sm {
+      font-size: theme("fontSize.h1");
+      line-height: theme("fontSize.h1.1.lineHeight");
+    }
+  }
+
+  h2,
+  .h2 {
+    font-size: theme("fontSize.mobile-h2");
+    line-height: theme("fontSize.mobile-h2.1.lineHeight");
+
+    @screen sm {
+      font-size: theme("fontSize.h2");
+      line-height: theme("fontSize.h2.1.lineHeight");
+    }
+  }
+
+  h3,
+  .h3 {
+    font-size: theme("fontSize.mobile-h3");
+    line-height: theme("fontSize.mobile-h3.1.lineHeight");
+
+    @screen sm {
+      font-size: theme("fontSize.h3");
+      line-height: theme("fontSize.h3.1.lineHeight");
+    }
+  }
+
+  h4,
+  .h4 {
+    font-size: theme("fontSize.mobile-h4");
+    line-height: theme("fontSize.mobile-h4.1.lineHeight");
+
+    @screen sm {
+      font-size: theme("fontSize.h4");
+      line-height: theme("fontSize.h4.1.lineHeight");
+    }
+  }
+
+  p,
+  .p {
+    font-family: theme("fontFamily.body");
+    font-weight: theme("fontWeight.normal");
+    line-height: theme("lineHeight.tight");
+    letter-spacing: theme("letterSpacing.normal");
+    font-size: theme("fontSize.sm");
+
+    @screen sm {
+      font-size: theme("fontSize.base");
+    }
+  }
+}

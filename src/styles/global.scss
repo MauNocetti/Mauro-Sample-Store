@@ -1,0 +1,32 @@
+/**
+ * Global Styles
+ * ========================================
+ * Should not include section or snippet stylesheets
+*/
+
+@import "tailwindcss/base";
+
+/* Vendor Styles */
+@import "core/vendor/swiper";
+
+/* Library Style Wrappers */
+@import "core/lib/swiper";
+@import "core/lib/video-player";
+
+/* Theme Styles */
+@import "core/theme/reboot";
+@import "core/theme/base";
+@import "core/theme/helpers";
+@import "core/theme/layout";
+@import "core/theme/fonts";
+@import "core/theme/typography";
+@import "core/theme/buttons";
+@import "core/theme/forms";
+
+/* Tailwind Utilities */
+@import "tailwindcss/utilities";
+
+/* Global Sections */
+@import "sections/section-header";
+
+/* Template Styles */
