@@ -4,3 +4,27 @@
  * Buttons
  * ==========================================================================
 */
+
+@layer base {
+  .btn {
+    display: inline-block;
+    font-family: theme("fontFamily.body");
+    font-weight: theme("fontWeight.bold");
+    color: theme("colors.white");
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: theme("colors.black");
+    border: 1px solid theme("colors.black");
+    border-radius: theme("borderRadius.md");
+    padding: theme("spacing.4") theme("spacing.9");
+    text-transform: uppercase;
+    min-width: 140px;
+    transition: opacity 0.3s ease-out;
+
+    &:hover,
+    &.hover {
+      opacity: 0.75;
+    }
+  }
+}

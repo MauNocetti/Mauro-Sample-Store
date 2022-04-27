@@ -4,59 +4,53 @@
  * ==========================================================================
 */
 
-@import "tailwindcss/components";
+#shopify-section-header {
+  z-index: 3;
+  will-change: transform;
+}
 
-@layer components {
-  /* section-header */
-  #shopify-section-header {
-    z-index: 3;
-    will-change: transform;
+.shopify-section-header-sticky {
+  position: sticky;
+  top: 0;
+}
+
+.shopify-section-header-hidden {
+  transform: translateY(-100%);
+}
+
+#shopify-section-header.animate {
+  transition: transform 0.15s ease-out;
+}
+
+.header {
+  padding: 20px 25px;
+
+  @media screen and (min-width: theme("screens.lg")) {
+    padding: 45px 30px;
   }
 
-  .shopify-section-header-sticky {
-    position: sticky;
-    top: 0;
+  @media screen and (min-width: theme("screens.xl")) {
+    padding: 45px 50px;
   }
 
-  .shopify-section-header-hidden {
-    transform: translateY(-100%);
+  .shopify-section-header-sticky & {
+    padding: 20px 50px;
   }
+}
 
-  #shopify-section-header.animate {
-    transition: transform 0.15s ease-out;
+.header__logo {
+  max-width: 120px;
+
+  @media screen and (min-width: theme("screens.xl")) {
+    max-width: none;
   }
+}
 
-  /* Main Header Layout */
-  .header {
-    padding: 20px 25px;
+.header__navigation {
+  flex: 3;
+}
 
-    @media screen and (min-width: theme("screens.lg")) {
-      padding: 45px 30px;
-    }
-
-    @media screen and (min-width: theme("screens.xl")) {
-      padding: 45px 50px;
-    }
-
-    .shopify-section-header-sticky & {
-      padding: 20px 50px;
-    }
-  }
-
-  .header__logo {
-    max-width: 120px;
-
-    @media screen and (min-width: theme("screens.xl")) {
-      max-width: none;
-    }
-  }
-
-  .header__navigation {
-    flex: 3;
-  }
-
-  .header__cart-bubble {
-    top: -8px;
-    right: -8px;
-  }
+.header__cart-bubble {
+  top: -8px;
+  right: -8px;
 }
