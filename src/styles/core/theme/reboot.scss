@@ -6,7 +6,8 @@
 
 @layer base {
   body {
-    color: theme("colors.white");
+    background-color: theme("colors.white");
+    color: theme("colors.black");
     font-family: theme("fontFamily.body");
     font-size: theme("fontSize.base");
     font-weight: theme("fontWeight.normal");

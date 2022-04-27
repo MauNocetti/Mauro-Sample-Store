@@ -5,4 +5,53 @@
 */
 
 @layer base {
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: theme("spacing.2") theme("spacing.5");
+    font-family: theme("fontFamily.body");
+    font-size: theme("fontSize.xs");
+    font-weight: theme("fontWeight.medium");
+    line-height: theme("lineHeight.4");
+    color: theme("colors.dark-grey");
+    background-color: theme("colors.white");
+    background-clip: padding-box;
+    border: 1px solid theme("colors.input-border");
+    border-radius: theme("borderRadius.full");
+    transition: border-color 0.3s ease-out;
+    outline: none;
+    min-width: 190px;
+
+    &::-ms-expand {
+      background-color: transparent;
+      border: 0;
+    }
+
+    &::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+
+    &:focus {
+      outline: none;
+      border-width: 2px;
+    }
+
+    // Placeholder
+    &::placeholder {
+      color: theme("colors.medium-gray");
+      opacity: 1;
+    }
+
+    // Disabled and read-only inputs
+    //
+    // HTML5 says that controls under a fieldset > legend:first-child won't be
+    // disabled if the fieldset is disabled. Due to implementation difficulty, we
+    // don't honor that edge case; we style them as disabled anyway.
+    &:disabled,
+    &[readonly] {
+      background-color: theme("colors.light-gray");
+      // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+      opacity: 1;
+    }
+  }
 }

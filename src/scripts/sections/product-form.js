@@ -6,12 +6,10 @@ class ProductForm extends HTMLElement {
 
     this.form = this.querySelector('form');
     this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
-    this.cartNotification = document.querySelector('cart-notification');
   }
 
   onSubmitHandler(evt) {
     evt.preventDefault();
-    this.cartNotification.setActiveElement(document.activeElement);
 
     const submitButton = this.querySelector('[type="submit"]');
 
@@ -20,15 +18,11 @@ class ProductForm extends HTMLElement {
 
     const body = JSON.stringify({
       ...JSON.parse(serializeForm(this.form)),
-      sections: this.cartNotification.getSectionsToRender().map((section) => section.id),
       sections_url: window.location.pathname
     });
 
     fetch(`${window.routes.cart_add_url}`, { ...fetchConfig('javascript'), body })
       .then((response) => response.json())
-      .then((parsedState) => {
-        this.cartNotification.renderContents(parsedState);
-      })
       .catch((e) => {
         console.error(e);
       })

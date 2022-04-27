@@ -181,6 +181,9 @@
     "header": {
       "announcement": "Announcement",
       "menu": "Menu",
+      "account": "My Account",
+      "login": "Sign in or Sign up",
+      "cart": "Cart",
       "cart_count": {
         "one": "{{ count }} item",
         "other": "{{ count }} items"

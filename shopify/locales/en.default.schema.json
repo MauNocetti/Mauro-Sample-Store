@@ -92,7 +92,7 @@
       "name": "Announcement Bar",
       "settings": {
         "show_bar": {
-          "label": "Show Bar?"
+          "label": "Show Bar"
         },
         "message": {
           "label": "Message"
@@ -491,15 +491,29 @@
     "header": {
       "name": "Header",
       "settings": {
+        "enable_sticky_header": {
+          "label": "Enable sticky header",
+          "info": "Header shows on the screen as customers scroll up."
+        },
         "logo": {
           "label": "Logo image"
         },
         "logo_width": {
           "unit": "px",
-          "label": "Custom logo width"
+          "label": "Custom logo width",
+          "info": "Only applies for Desktop devices"
         },
         "menu": {
           "label": "Menu"
+        },
+        "show_sale_btn": {
+          "label": "Show Sale Button"
+        },
+        "sale_btn_label": {
+          "label": "Sale Button Label"
+        },
+        "sale_btn_link": {
+          "label": "Sale Button Link"
         }
       }
     },

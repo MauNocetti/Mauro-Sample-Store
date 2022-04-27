@@ -37,7 +37,8 @@ module.exports = {
         }],
         'mobile-h4': ['1rem', {
           lineHeight: '1.5'
-        }]
+        }],
+        'xxs': '0.625rem'
       },
       zIndex: {
         'header': 1000,
@@ -49,9 +50,12 @@ module.exports = {
       'transparent': 'transparent',
       'current': 'currentColor',
       'border': '#ECECEC',
+      'input-border': '#c4c4c4',
       'black': '#141414',
       'white': '#ffffff',
       'light-gray': '#FAFBFB',
+      'medium-gray': '#A3A3A3',
+      'dark-grey': "#4A4A4A",
       'ferrari-red': '#FF2500',
       'sapphire': '#005BC4',
       'valid': '#50C878',
