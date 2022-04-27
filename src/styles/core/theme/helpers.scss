@@ -1,0 +1,65 @@
+/*
+ * ==========================================================================
+ * Helpers
+ * ==========================================================================
+*/
+
+@layer base {
+  .js {
+    .no-js & {
+      display: none;
+    }
+  }
+
+  .js-focus-hidden:focus {
+    outline: none;
+  }
+
+  .no-js:not(html) {
+    display: none;
+
+    .no-js & {
+      display: block;
+    }
+  }
+
+  .skip-link:focus {
+    position: absolute;
+    overflow: auto;
+    clip: auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+    color: theme("colors.black");
+    background-color: theme("colors.white");
+    padding: theme("spacing.4");
+    z-index: theme("zIndex.skip");
+    transition: none;
+  }
+
+  .supports-cookies {
+    html.supports-no-cookies & {
+      display: none;
+    }
+  }
+
+  .supports-no-cookies:not(html) {
+    display: none;
+
+    html.supports-no-cookies & {
+      display: block;
+    }
+  }
+
+  .visually-hidden {
+    position: absolute !important;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    word-wrap: normal !important;
+  }
+}

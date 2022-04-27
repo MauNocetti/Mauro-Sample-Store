@@ -1,0 +1,26 @@
+{%- if section.settings.show_bar -%}
+  <section class="bg-sapphire px-4 t py-6" role="region" aria-label="{{ 'sections.header.announcement' | t }}">
+    {%- if section.settings.heading != blank -%}
+      <p class="font-bold text-white">{{ section.settings.heading }}</p>
+    {%- endif -%}
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.announcement-bar.name",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_bar",
+      "default": true,
+      "label": "t:sections.announcement-bar.settings.show_bar.label"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:sections.announcement-bar.settings.message.label"
+    }
+  ]
+}
+{% endschema %}

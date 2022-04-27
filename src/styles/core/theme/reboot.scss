@@ -1,0 +1,30 @@
+/*
+ * ==========================================================================
+ * Reboot
+ * ==========================================================================
+*/
+
+@layer base {
+  body {
+    color: theme("colors.white");
+    font-family: theme("fontFamily.body");
+    font-size: theme("fontSize.base");
+    font-weight: theme("fontWeight.normal");
+    letter-spacing: theme("letterSpacing.normal");
+    line-height: theme("fontSize.base.1.lineHeight");
+    margin: 0;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  [tabindex="-1"]:focus {
+    outline: 0 !important;
+  }
+
+  hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+  }
+}

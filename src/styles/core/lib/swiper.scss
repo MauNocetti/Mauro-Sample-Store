@@ -1,0 +1,58 @@
+// -------------------------
+// Slideshow Element
+// -------------------------
+
+// Base styling for all swiper instances
+.swiper-container {
+
+}
+
+.swiper-arrow {
+  position: absolute;
+  z-index: 12;
+  top: unset;
+  bottom: 2%;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  &--left {
+    left: 5px;
+    
+    @media screen and (min-width: theme("screens.lg")) {
+      left: 0;
+    }
+  }
+  &--right {
+    right: 5px;
+
+    @media screen and (min-width: theme("screens.lg")) {
+      right: 0;
+    }
+  }    
+}
+
+.swiper-pagination-bullet {
+  height: 0.5rem;
+  width: 8rem;  
+  background-color: theme('colors.black');
+  transition: background-color 0.3s ease-in;
+  border-radius: 0;
+  opacity: 0.4;
+
+  @media screen and (min-width: theme("screens.md")) {
+    height: 0.5rem;
+    width: 10rem; 
+  }
+
+  &:hover,
+  &:focus,
+  &.swiper-pagination-bullet-active {
+    transition: background-color 0.3s ease-out;  
+    background-color: theme('colors.black');
+    opacity: 1;
+  }
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+
+}
