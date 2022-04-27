@@ -1,0 +1,57 @@
+<div class="icon-grid bg-light-gray px-10 lg:px-40">
+  {% if section.blocks.size > 0 %}
+    <div class="icon-grid__content flex justify-evenly flex-col lg:flex-row py-14">
+      {% for block in section.blocks %}
+        <div class="icon-grid__item text-center mx-4 my-5 lg:mb-0">
+          {% if block.settings.image != blank %}
+            <div class="mx-auto" style="width: {{ block.settings.icon_max_width }}px; height: {{ block.settings.icon_max_width }}px;">
+              <img src="{{ block.settings.image | image_url }}"
+                loading="lazy"
+                alt="{{ block.settings.image.alt | escape }}"
+                width="{{ block.settings.image.width }}"
+                height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio }}" />
+            </div>
+          {% endif %}
+
+          {% if block.settings.title != blank %}
+            <div class="h4 font-bold mb-0">{{ block.settings.title | replace: '<p>', '<p class="h4 font-bold mb-0">' }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.icon-grid.name",
+    "max_blocks": 3,
+    "blocks": [
+      {
+        "type": "icon_group",
+        "name": "t:sections.icon-grid.blocks.icon-box.name",
+        "settings":[
+          {
+            "id": "image",
+            "type": "image_picker",
+            "label": "t:sections.icon-grid.blocks.icon-box.settings.icon.label"
+          },
+          {
+            "type": "number",
+            "id": "icon_max_width",
+            "label": "t:sections.icon-grid.blocks.icon-box.settings.icon-max-with.label",
+            "default": 75
+          },
+          {
+            "id": "title",
+            "type": "richtext",
+            "label": "t:sections.icon-grid.blocks.icon-box.settings.title.label"
+          }
+        ]
+      }
+    ],
+    "presets": [{
+      "name": "t:sections.icon-grid.presets.name"
+    }]
+  }
+{% endschema %} 

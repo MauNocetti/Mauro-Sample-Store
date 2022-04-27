@@ -589,6 +589,28 @@
         "name": "Image banner"
       }
     },
+    "icon-grid": {
+      "name": "Icon Grid",
+      "blocks": {
+        "icon-box": {
+          "name": "Icon Box",
+          "settings": {
+            "icon": {
+              "label": "Icon"
+            },
+            "icon-max-with": {
+              "label": "Icon Max Width"
+            },
+            "title": {
+              "label": "Title"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Icon Grid"
+      }
+    },
     "image-with-text": {
       "name": "Image with text",
       "settings": {
