@@ -3,32 +3,57 @@
     "image_banner": {
       "type": "image-banner",
       "settings": {
-        "desktop_text_box_position": "flex-end"
-      },
+        "vertical_alignment": "items-center",
+        "horizontal_alignment": "justify-start",
+        "image": "shopify://shop_images/hero_image.jpg",
+        "eyebrow": "IN STORES & ONLINE",
+        "heading": "50% OFF EVERYTHING",
+        "text": "",
+        "button_label_1": "Women",
+        "button_link_1": "shopify://pages/contact",
+        "button_label_2": "Men",
+        "button_link_2": "shopify://pages/contact",
+        "button_label_3": "Kids",
+        "button_link_3": "shopify://pages/contact",
+        "button_label_4": "Home",
+        "button_link_4": "shopify://pages/contact"
+      }
+    },
+    "1651098665fd61e0fe": {
+      "type": "icon-grid",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "ca7480b9-e0af-4638-a9c0-ca6e516885fc": {
+          "type": "icon_group",
           "settings": {
-            "heading": "Talk about your brand"
+            "image": "shopify://shop_images/shipping-icon.png",
+            "icon_max_width": 75,
+            "title": "<p>FREE SHIPPING </p><p>ON ALL ORDERS</p>"
           }
         },
-        "button": {
-          "type": "buttons",
+        "18a35a03-9161-4e8a-9307-165afd610782": {
+          "type": "icon_group",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_label_2": ""
+            "image": "shopify://shop_images/returns-icon.png",
+            "icon_max_width": 75,
+            "title": "<p>FREE RETURNS<br/>ON ALL ORDERS</p>"
+          }
+        },
+        "671013d8-2f06-4b26-9724-6eab82296f50": {
+          "type": "icon_group",
+          "settings": {
+            "image": "shopify://shop_images/checkout-icon.png",
+            "icon_max_width": 75,
+            "title": "<p>SAFE & SECURE </p><p>CHECKOUT</p>"
           }
         }
       },
-      "block_order": ["heading", "button"]
-    },
-    "featured_products": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products"
-      }
+      "block_order": [
+        "ca7480b9-e0af-4638-a9c0-ca6e516885fc",
+        "18a35a03-9161-4e8a-9307-165afd610782",
+        "671013d8-2f06-4b26-9724-6eab82296f50"
+      ],
+      "settings": {}
     }
   },
-  "order": ["image_banner", "featured_products"]
+  "order": ["image_banner", "1651098665fd61e0fe"]
 }
